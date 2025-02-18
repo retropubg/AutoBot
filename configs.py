@@ -10,6 +10,7 @@ class Config:
 sudo_env = os.getenv("SUDO", "").strip()
 SUDO = list(map(int, sudo_env.split())) if sudo_env else []
 
-    MONGO_URI = getenv("MONGO_URI", "mongodb://mongo:XTKWKCzhppgfmcSoenGawpAdLxDdKAOE@mongodb.railway.internal:27017")
-    
+    SUDO = list(map(int, os.getenv("SUDO", "").split())) if os.getenv("SUDO") else []
+    MONGO_URI = os.getenv("MONGO_URI", "mongodb://mongo:XTKWKCzhppgfmcSoenGawpAdLxDdKAOE@mongodb.railway.internal:27017")
+
 cfg = Config()
