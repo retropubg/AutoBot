@@ -7,6 +7,6 @@ class Config:
     FSUB = getenv("FSUB", "AMBOTYT")
     CHID = int(getenv("CHID", "-1000112234"))
     SUDO = list(map(int, getenv("SUDO").split()))
-    MONGO_URI = getenv("MONGO_URI", "")
+    MONGO_URI = getenv("MONGO_URI", "mongodb://mongo:XTKWKCzhppgfmcSoenGawpAdLxDdKAOE@mongodb.railway.internal:27017")
     
 cfg = Config()
