@@ -6,7 +6,10 @@ class Config:
     BOT_TOKEN = getenv("BOT_TOKEN", "7633669044:AAHiS9PWSZkyZeHdTA6m8-6PYNf9DKitfvQ")
     FSUB = getenv("FSUB", "AMBOTYT")
     CHID = int(getenv("CHID", "-1000112234"))
-    SUDO = list(map(int, getenv("SUDO").split()))
+    
+sudo_env = os.getenv("SUDO", "").strip()
+SUDO = list(map(int, sudo_env.split())) if sudo_env else []
+
     MONGO_URI = getenv("MONGO_URI", "mongodb://mongo:XTKWKCzhppgfmcSoenGawpAdLxDdKAOE@mongodb.railway.internal:27017")
     
 cfg = Config()
